@@ -14,6 +14,7 @@
 		25C1AC661BFB855A00BBC836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C1AC641BFB855A00BBC836 /* LaunchScreen.storyboard */; };
 		25C1AC711BFB855A00BBC836 /* iManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1AC701BFB855A00BBC836 /* iManagerTests.swift */; };
 		25C1AC7C1BFB855A00BBC836 /* iManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1AC7B1BFB855A00BBC836 /* iManagerUITests.swift */; };
+		25C1AC8D1BFB86E400BBC836 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C1AC8C1BFB86E400BBC836 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		25C1AC771BFB855A00BBC836 /* iManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C1AC7B1BFB855A00BBC836 /* iManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iManagerUITests.swift; sourceTree = "<group>"; };
 		25C1AC7D1BFB855A00BBC836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25C1AC8A1BFB86E300BBC836 /* iManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		25C1AC8B1BFB86E400BBC836 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		25C1AC8C1BFB86E400BBC836 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +128,14 @@
 		25C1AC891BFB85D800BBC836 /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
+				25C1AC8B1BFB86E400BBC836 /* SWRevealViewController.h */,
+				25C1AC8C1BFB86E400BBC836 /* SWRevealViewController.m */,
 				25C1AC581BFB855A00BBC836 /* AppDelegate.swift */,
 				25C1AC621BFB855A00BBC836 /* Assets.xcassets */,
 				25C1AC641BFB855A00BBC836 /* LaunchScreen.storyboard */,
 				25C1AC671BFB855A00BBC836 /* Info.plist */,
 				25C1AC5F1BFB855A00BBC836 /* iManager.xcdatamodeld */,
+				25C1AC8A1BFB86E300BBC836 /* iManager-Bridging-Header.h */,
 			);
 			name = "Additional Files";
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 		25C1AC4D1BFB855A00BBC836 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Fabian Kola";
 				TargetAttributes = {
@@ -265,6 +273,7 @@
 			files = (
 				25C1AC611BFB855A00BBC836 /* iManager.xcdatamodeld in Sources */,
 				25C1AC591BFB855A00BBC836 /* AppDelegate.swift in Sources */,
+				25C1AC8D1BFB86E400BBC836 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,11 +415,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.fabian-kola.iManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iManager/iManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -418,11 +430,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.fabian-kola.iManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iManager/iManager-Bridging-Header.h";
 			};
 			name = Release;
 		};
